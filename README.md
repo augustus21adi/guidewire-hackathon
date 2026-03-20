@@ -1,31 +1,91 @@
-# 🛵 RainShield — AI-Powered Income Protection for Delivery Riders
+# 🛵 GigShield — AI-Powered Parametric Income Insurance for Delivery Partners
 
 > **Guidewire DEVTrails 2026 | Phase 1 Submission**
-> Protecting delivery partners from income loss due to real-world disruptions.
+> Protecting the livelihoods of delivery partners from uncontrollable external disruptions.
 
 ---
 
 ## 📌 Problem Statement
 
-Delivery partners working with platforms like Zomato and Swiggy depend on daily earnings. However, external disruptions such as heavy rain, extreme heat, pollution, or curfews can stop them from working, leading to **20–30% income loss**.
+India’s food delivery partners (Zomato, Swiggy) are a critical part of the gig economy. However, external disruptions such as heavy rainfall, extreme heat, pollution, curfews, or platform outages can reduce their working hours and cause **20–30% income loss**.
 
-Currently, there is **no financial safety net** for such situations.
+Currently, there is **no financial safety net** to protect them from such uncontrollable situations.
 
-⚠️ **Scope Constraint:**
-This solution covers **loss of income ONLY**.
-It does NOT include health, accident, or vehicle insurance.
+⚠️ **Coverage Scope:**
+GigShield covers **LOSS OF INCOME ONLY**.
+It strictly excludes:
+
+* Health insurance
+* Accident coverage
+* Vehicle repair
 
 ---
 
-## 💡 Our Solution — RainShield
+## 💡 Our Solution — GigShield
 
-RainShield is an **AI-powered parametric insurance platform** that automatically compensates delivery workers when disruptions occur.
+GigShield is an **AI-powered parametric insurance platform** that automatically compensates delivery workers for income loss caused by real-world disruptions.
 
-✔ No manual claims
-✔ Real-time detection
+✔ Zero manual claims
+✔ Real-time monitoring
 ✔ Instant payouts
 
-The system uses APIs and AI to detect events and trigger compensation automatically.
+The system detects events using APIs and triggers payouts automatically when predefined conditions are met.
+
+---
+
+## 🧠 Core Innovations
+
+### 1. Shift-Level Coverage
+
+Instead of daily payouts, GigShield compensates workers based on **disrupted working hours (shifts)**.
+
+**Formula:**
+
+```
+Payout = (Avg Weekly Earning ÷ Total Hours) × Lost Hours × Coverage %
+```
+
+---
+
+### 2. Zone Risk Score (ZRS)
+
+Each delivery zone is assigned a **risk score (0–100)** based on:
+
+* Historical weather data
+* Flood/heat patterns
+* Claim frequency
+
+This score dynamically adjusts premiums.
+
+---
+
+### 3. 3-Signal Fraud Detection
+
+Claims are validated using three signals:
+
+* Weather Data
+* Platform Activity Drop
+* GPS Location
+
+✔ If 2 out of 3 match → Auto approval
+❌ Otherwise → Flag for review
+
+---
+
+### 4. Income Smoothing Algorithm (ISA)
+
+Workers are protected at a **weekly level**, not just per event.
+
+```
+Rolling Income Baseline (RIB) = Avg of last 4 weeks
+Income Gap = RIB − Current Week Earnings
+```
+
+If disruption occurred:
+
+```
+Payout = Income Gap × Coverage %
+```
 
 ---
 
@@ -33,9 +93,9 @@ The system uses APIs and AI to detect events and trigger compensation automatica
 
 **Food Delivery Riders (Zomato/Swiggy)**
 
-* Age: 20–35
-* Income: ₹4000–₹7000/week
-* Highly dependent on peak hours (lunch & dinner)
+* Weekly income: ₹4,000–₹6,500
+* Peak earnings during lunch & dinner
+* Highly sensitive to weather disruptions
 * No financial buffer
 
 ---
@@ -43,77 +103,89 @@ The system uses APIs and AI to detect events and trigger compensation automatica
 ## ⚙️ Application Workflow
 
 1. User registers on platform
-2. AI analyzes risk based on location and past data
+2. AI generates risk profile (Zone Risk Score)
 3. Weekly premium is calculated
-4. System monitors real-time conditions
-5. If disruption occurs → claim auto-triggered
-6. Instant payout credited
+4. User selects coverage plan
+5. System continuously monitors:
+
+   * Weather
+   * Platform activity
+   * GPS location
+6. Disruption detected → claim auto-triggered
+7. Instant payout credited
+8. Weekly income check → additional top-up if needed
 
 ---
 
 ## 🌦️ Parametric Triggers
 
-| Trigger        | Condition        | Payout |
-| -------------- | ---------------- | ------ |
-| Heavy Rain     | > 80mm rainfall  | ₹300   |
-| Extreme Heat   | > 45°C           | ₹200   |
-| High Pollution | AQI > 300        | ₹150   |
-| Curfew         | Govt restriction | ₹250   |
+| Trigger         | Threshold        |
+| --------------- | ---------------- |
+| Heavy Rainfall  | > 40mm (3 hours) |
+| Extreme Heat    | > 42°C           |
+| Air Pollution   | AQI > 400        |
+| Curfew          | Govt restriction |
+| Platform Outage | > 70% order drop |
+
+---
+
+## 💰 Weekly Premium Model
+
+### Base Plans
+
+| Tier           | Weekly Premium | Coverage |
+| -------------- | -------------- | -------- |
+| Basic Shield   | ₹29            | 50%      |
+| Standard Guard | ₹49            | 75%      |
+| Pro Armor      | ₹79            | 100%     |
+
+---
+
+### Dynamic Adjustments
+
+* High-risk zone → +₹10 to ₹18
+* Low-risk zone → −₹5 to ₹8
+* Weather forecast risk → +₹5
+* Low claim history → Discount
 
 ---
 
 ## 🤖 AI/ML Integration
 
-### 1. Risk Assessment
+### Risk Scoring Model
 
-* Classifies areas into Low / Medium / High risk
-* Based on historical weather and disruption data
+* Predicts zone risk using historical data
 
-### 2. Dynamic Premium Calculation
+### Dynamic Pricing Engine
 
-* Premium adjusts based on:
+* Adjusts premiums per user
 
-  * Location risk
-  * Historical disruptions
+### Fraud Detection System
 
-### 3. Fraud Detection
+* Detects anomalies using multi-signal validation
 
-* GPS location validation
-* Duplicate claim detection
-* Abnormal pattern detection
+### Income Smoothing Algorithm
+
+* Ensures stable weekly income
 
 ---
 
-## 💰 Weekly Pricing Model
+## 🔐 Fraud Prevention
 
-| Risk Level  | Weekly Premium |
-| ----------- | -------------- |
-| Low Risk    | ₹10            |
-| Medium Risk | ₹20            |
-| High Risk   | ₹30            |
-
-✔ Designed to match gig workers’ weekly earning cycle
-
----
-
-## 🔐 Fraud Prevention System
-
-* Location verification (GPS-based)
-* Duplicate claim blocking
-* Event validation using APIs
-* Anomaly detection
+* GPS validation
+* Duplicate claim prevention
+* Multi-signal verification
+* Claim frequency monitoring
 
 ---
 
 ## 🖥️ Platform Choice
 
-**Web Application (Mobile Friendly)**
+**Progressive Web App (PWA)**
 
-Reason:
-
-* Easy access (no install needed)
-* Fast development
-* Works on all devices
+* Mobile-first design
+* No installation required
+* Works on low-end devices
 
 ---
 
@@ -121,23 +193,25 @@ Reason:
 
 Frontend:
 
-* React.js
+* React.js (PWA)
 
 Backend:
 
-* Python (Flask)
+* Node.js + Express
 
 Database:
 
-* SQLite / Firebase
+* PostgreSQL
+
+AI/ML:
+
+* Python (Scikit-learn / XGBoost)
 
 APIs:
 
 * OpenWeather API
-
-AI/ML:
-
-* Scikit-learn
+* AQI API
+* Mock Platform API
 
 Payments:
 
@@ -147,30 +221,32 @@ Payments:
 
 ## 🗓️ Development Plan
 
-### Phase 1 (Current)
+### Phase 1 (Ideation & Foundation)
 
-* Idea design ✅
-* Workflow planning ✅
-* AI model planning ✅
-* README documentation ✅
+* Problem analysis ✅
+* Persona definition ✅
+* Workflow design ✅
+* AI planning ✅
+* README creation ✅
 * Video explanation ⏳
 
 ---
 
-### Phase 2 (Next)
+### Phase 2 (Automation & Protection)
 
-* User registration system
+* User registration
 * Policy management
-* Dynamic premium system
+* Premium calculation
 * Claim automation
 
 ---
 
-### Phase 3 (Final)
+### Phase 3 (Scale & Optimization)
 
 * Fraud detection system
 * Payment integration
-* Dashboard for users & admin
+* Worker & admin dashboards
+* Final demo & pitch
 
 ---
 
@@ -186,17 +262,17 @@ Payments:
 
 ---
 
-## 🚀 Why RainShield?
+## 🚀 Why GigShield?
 
-* Fully automated insurance
-* No paperwork
-* Instant payouts
-* AI-driven decisions
-* Designed specifically for gig workers
+* Shift-based accurate payouts
+* AI-driven dynamic pricing
+* Fully automated claims
+* Strong fraud detection
+* Weekly income protection
 
 ---
 
 ## ❤️ Final Note
 
-RainShield ensures that when disruptions stop work,
+GigShield ensures that when disruptions stop work,
 **income doesn’t stop.**
