@@ -182,7 +182,7 @@ Payments:
 
 ## 🔗 GitHub Repository
 
-👉 https://github.com/augustus21adi/guidewire-hackathon/new/main?readme=1
+👉 https://github.com/augustus21adi/guidewire-hackathon
 
 ---
 
