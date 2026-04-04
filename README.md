@@ -473,8 +473,10 @@ The worker-facing UI is designed for **one-thumb operation** — the most common
 | Worker loyalty | No incentive to stay | **Streak Bonus discount** |
 | Payout speed | Days / weeks | **< 5 minutes (shift) + Sunday top-up (ISA)** |
 
-demo video: https://youtu.be/dET2CezY9_I
+demo video: https://youtu.be/dET2CezY9_I 
+
 try it out: https://augustus21adi.github.io/guidewire-hackathon/
+
 github repo: https://github.com/augustus21adi/guidewire-hackathon
 
 ---
